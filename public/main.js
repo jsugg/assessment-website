@@ -3,6 +3,11 @@ async function submitForm() {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
 
+    if (name == '' || email == '') {
+        alert('Please fill out the name and email fields.');
+        return;
+     }
+
     // Collect answers
     const answers = [];
     for (let i = 1; i <= 18; i++) {
