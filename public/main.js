@@ -70,7 +70,7 @@ async function startRecording(id) {
         }
     };
 
-    mediaRecorder.start(30000);
+    mediaRecorder.start(60000);
     document.getElementById(`stop-recording-${id}`).classList.add('enabled');
     document.getElementById(`start-recording-${id}`).classList.add('disabled');
 }
