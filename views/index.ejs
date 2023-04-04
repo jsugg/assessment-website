@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Assessment</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>English Assessment</h1>
+        <form action="/submit" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <h2>A. Listening Comprehension</h2>
+            <p>Listen to the following business conversation recordings and answer the multiple-choice questions below.</p>
+
+            <p>
+                <strong>Recording 1:</strong>
+                <a href="https://www.suggnet.com/english-course/listening/exercise-1.mp3" target="_blank">Exercise 1</a>
+            </p>
+
+            <label for="q1">Q1: What is the main issue discussed in the conversation?</label>
+            <select id="q1" name="q1" required>
+                <option value="a">A delayed flight</option>
+                <option value="b">A lost luggage</option>
+                <option value="c">A missed connection</option>
+                <option value="d">A canceled flight</option>
+            </select>
+
+            <label for="q2">Q2: What does the employee suggest the customer do?</label>
+            <select id="q2" name="q2" required>
+                <option value="a">Wait at the baggage claim area</option>
+                <option value="b">Fill out a lost luggage form</option>
+                <option value="c">Track the progress online or call the airline's customer service</option>
+                <option value="d">Go to the ticket counter and wait 24 hours</option>
+            </select>
+
+            <p>
+                <strong>Recording 2:</strong>
+                <a href="https://www.suggnet.com/english-course/listening/exercise-2.mp3" target="_blank">Exercise 2</a>
+            </p>
+
+            <label for="q3">Q3: What is the customer looking for in the conversation?</label>
+            <select id="q3" name="q3" required>
+                <option value="a">A suit</option>
+                <option value="b">A dress</option>
+                <option value="c">A tie</option>
+                <option value="d">A shirt</option>
+            </select>
+
+            <label for="q4">Q4: How much does the item cost?</label>
+            <select id="q4" name="q4" required>
+                <option value="a">£ 14,99</option>
+                <option value="b">£ 24,99</option>
+                <option value="c">£ 44,99</option>
+                <option value="d">£ 144,99</option>
+            </select>
+
+            <p>
+                <strong>Recording 3:</strong>
+                <a href="https://www.suggnet.com/english-course/listening/exercise-3.mp3" target="_blank">Exercise 3</a>
+            </p>
+            <label for="q5">Q5: What does she order for her main course?</label>
+            <select id="q5" name="q5" required>
+                <option value="a">Steak</option>
+                <option value="b">Chicken</option>
+                <option value="c">Burger</option>
+                <option value="d">Salad</option>
+            </select>
+    
+            <label for="q6">Q6: What does he order to drink?</label>
+            <select id="q6" name="q6" required>
+                <option value="a">Pepsi</option>
+                <option value="b">Coke</option>
+                <option value="c">Coke and Water</option>
+                <option value="d">Water</option>
+            </select>
+    
+            <h2>B. Speaking Fluency</h2>
+            <p>Record your voice while answering two of the following open-ended questions (Note: This feature is not available in this HTML form, you will need to implement a recording feature in your application):</p>
+    
+            <ul>
+                <li>Q1: Describe a recent project you worked on and the challenges you faced.</li>
+                <li>Q2: If you could start your own business, what would it be and why?</li>
+                <li>Q3: What are the most important qualities a leader should have in a business setting?</li>
+                <li>Q4: How do you handle conflict in the workplace?</li>
+                <li>Q5: Describe an effective strategy for managing a team of remote workers.</li>
+                <li>Q6: How do you prioritize tasks when you have multiple projects to complete?</li>
+            </ul>
+
+            <button type="button" id="start-recording-speaking" onclick="startRecording('speaking')">Start Recording</button>
+            <button type="button" id="stop-recording-speaking" onclick="stopRecording('speaking')">Stop Recording</button>
+            <audio id="speaking-audio" controls></audio>
+            <input type="hidden" id="speaking-recording" name="speaking-recording">
+    
+            <h2>C. Vocabulary</h2>
+            <p>Complete the following sentences with the appropriate word from the choices given.</p>
+    
+            <label for="q7">Q1: The company is known for its innovative ________.</label>
+            <select id="q7" name="q7" required>
+                <option value="a">products</option>
+                <option value="b">promotions</option>
+                <option value="c">productions</option>
+                <option value="d">profits</option>
+            </select>
+            
+            <label for="q8">Q2: The marketing campaign was a huge ________.</label>
+            <select id="q8" name="q8" required>
+                <option value="a">success</option>
+                <option value="b">failure</option>
+                <option value="c">disappointment</option>
+                <option value="d">revelation</option>
+            </select>
+            
+            <label for="q9">Q3: The CEO wants to ________ costs and increase revenue.</label>
+            <select id="q9" name="q9" required>
+                <option value="a">cut</option>
+                <option value="b">raise</option>
+                <option value="c">calculate</option>
+                <option value="d">estimate</option>
+            </select>
+            
+            <label for="q10">Q4: The project is ________ schedule, and we should complete it on time.</label>
+            <select id="q10" name="q10" required>
+                <option value="a">ahead of</option>
+                <option value="b">behind</option>
+                <option value="c">on</option>
+                <option value="d">off</option>
+            </select>
+            
+            <label for="q11">Q5: The manager asked her team to ________ new ideas for the project.</label>
+            <select id="q11" name="q11" required>
+                <option value="a">brainstorm</option>
+                <option value="b">disregard</option>
+                <option value="c">ignore</option>
+                <option value="d">postpone</option>
+            </select>
+            
+            <label for="q12">Q6: The company has a strong ________ in the market.</label>
+            <select id="q12" name="q12" required>
+                <option value="a">position</option>
+                <option value="b">supposition</option>
+                <option value="c">transition</option>
+                <option value="d">composition</option>
+            </select>
+    
+            <h2>D. Pronunciation</h2>
+            <p>Record your voice while reading the following sentences (Note: This feature is not available in this HTML form, you will need to implement a recording feature in your application):</p>
+    
+            <ul>
+                <li>Q1: The marketing department is responsible for promoting the company's products.</li>
+                <li>Q2: The board of directors approved the budget for the next fiscal year.</li>
+                <li>Q3: Our department is responsible for tracking and analyzing customer feedback.</li>
+                <li>Q4: The human resources team is organizing a training session for new employees.</li>
+                <li>Q5: The company is expanding its operations to new markets in Europe and Asia.</li>
+                <li>Q6: Customer service representatives must be able to handle complaints professionally.</li>
+            </ul>
+
+            <button type="button" id="start-recording-pronunciation" onclick="startRecording('pronunciation')">Start Recording</button>
+            <button type="button" id="stop-recording-pronunciation" onclick="stopRecording('pronunciation')">Stop Recording</button>
+            <audio id="pronunciation-audio" controls></audio>
+            <input type="hidden" id="pronunciation-recording" name="pronunciation-recording">
+
+            <h2>E. Grammar and Syntax</h2>
+            <p>Choose the correct option to complete each sentence.</p>
+
+            <label for="q13">Q1: Our team ________ on the project since last month.</label>
+            <select id="q13" name="q13" required>
+                <option value="a">has been working</option>
+                <option value="b">is working</option>
+                <option value="c">have been working</option>
+                <option value="d">worked</option>
+            </select>
+
+            <label for="q14">Q2: The conference will be held ________ the main auditorium.</label>
+            <select id="q14" name="q14" required>
+                <option value="a">on</option>
+                <option value="b">at</option>
+                <option value="c">in</option>
+                <option value="d">to</option>
+            </select>
+
+            <label for="q15">Q3: If we ________ more resources, we could finish the project earlier.</label>
+            <select id="q15" name="q15" required>
+                <option value="a">have</option>
+                <option value="b">has</option>
+                <option value="c">had</option>
+                <option value="d">having</option>
+            </select>
+
+            <label for="q16">Q4: She ________ respond to the email as soon as she receives it.</label>
+            <select id="q16" name="q16" required>
+                <option value="a">should</option>
+                <option value="b">must</option>
+                <option value="c">could</option>
+                <option value="d">might</option>
+            </select>
+
+            <label for="q17">Q5: The project manager asked for an update, but I ________ finish the report yet.</label>
+            <select id="q17" name="q17" required>
+                <option value="a">didn't</option>
+                <option value="b">don't</option>
+                <option value="c">haven't</option>
+                <option value="d">won't</option>
+            </select>
+
+            <label for="q18">Q6: The marketing team is developing a campaign that ________ a wider audience.</label>
+            <select id="q18" name="q18" required>
+                <option value="a">will attract</option>
+                <option value="b">attracted</option>
+                <option value="c">has attracted</option>
+                <option value="d">would attract</option>
+            </select>
+    
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+</body>
+</html>    
